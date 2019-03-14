@@ -10,12 +10,13 @@ using namespace std;
 
 const int n = 1000000; // number of elements in array
 int coef1, coef2, coef3;
+Enrolle enr[n];
 
-void ReadFromFile(Enrolle enr[]) {
+void ReadFromFile() {
 
 }
 
-void CalculateRating(Enrolle enr[]) {
+void CalculateRating() {
 	float start_time = clock();
 	for (int i = 0; i < n; i ++) {
 		enr[i].ratMark = enr[i].ex1*coef1 + enr[i].ex2*coef2 + enr[i].ex3*coef3 + 
@@ -26,7 +27,7 @@ void CalculateRating(Enrolle enr[]) {
 }
 
 // insertion sort
-void SortEnrolles(Enrolle enr[]) {
+void SortEnrolles() {
 	Enrolle key;
 	int index;
 	float start_time = clock();
@@ -44,7 +45,7 @@ void SortEnrolles(Enrolle enr[]) {
 }
 
 // used for debugging. Prints first 5 and last 5 elements in array.
-void PrintFiveFirstAndLast(Enrolle enr[]) {
+void PrintFiveFirstAndLast() {
 	for (int i = 0; i < 5; i++) {
 		cout << enr[i].name << ": ex1=" << enr[i].ex1 << ", ex2=" << enr[i].ex2
 			<< ", ex3=" << enr[i].ex3 << ", certMark=" << enr[i].certMark
@@ -61,16 +62,16 @@ void PrintFiveFirstAndLast(Enrolle enr[]) {
 
 int main()
 {
-	Enrolle enr[n];
-	ReadFromFile(enr);
+	
+	ReadFromFile();
 	cout << "-----------------------------\n";
-	CalculateRating(enr);
+	CalculateRating();
 	cout << "-----------------------------\n";
 	cout << "Some of elements before processing:\n";
-	PrintFiveFirstAndLast(enr);
+	PrintFiveFirstAndLast();
 	cout << "------------------\n";
-	SortEnrolles(enr);
+	SortEnrolles();
 	cout << "------------------\n";
 	cout << "Some of elements after processing:\n";
-	PrintFiveFirstAndLast(enr);
+	PrintFiveFirstAndLast();
 }
