@@ -16,7 +16,7 @@ int main()
 }
 
 void ReadFromFile(Enrolle enr[]) {
-
+	std::cout << "Lexa - cross";
 }
 
 void CalculateRating(Enrolle enr[]) {
