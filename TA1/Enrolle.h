@@ -21,5 +21,7 @@ class Enrolle
 			this->certMark = certMark;
 		}
 
+		Enrolle()
+
 };
 
