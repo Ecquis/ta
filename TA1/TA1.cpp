@@ -5,6 +5,9 @@
 #include <iostream>
 #include "Enrolle.h"
 #include "time.h"
+#include <fstream>
+#include <string>
+#include <sstream>
 
 using namespace std;
 
@@ -12,8 +15,31 @@ const int n = 1000000; // number of elements in array
 int coef1, coef2, coef3;
 Enrolle enr[n];
 
-void ReadFromFile() {
+void ReadFromFile(string path) {
+	ifstream finp(path);
+	string line;
+	int j = 0;
+	while (getline(finp, line))
+	{
+		
+		stringstream lineStream(line);
+		string cell;
+		int i = 0;
+		while (getline(lineStream, cell, ','))
+		{
+			i++;
+			switch (i) {
+			case 1: {enr[j].name += cell + ' '; break; }
+			case 2: {enr[j].name += cell; break; }
+			case 3: {enr[j].ex1 = stoi(cell); break; }
+			case 4: {enr[j].ex2 = stoi(cell); break; }
+			case 5: {enr[j].ex3 = stoi(cell); break; }
+			case 6: {enr[j].certMark = stoi(cell); break; }
+			}
 
+		}
+		j++;
+	}
 }
 
 void CalculateRating() {
@@ -62,8 +88,7 @@ void PrintFiveFirstAndLast() {
 
 int main()
 {
-	
-	ReadFromFile();
+	ReadFromFile("base.csv");
 	cout << "-----------------------------\n";
 	CalculateRating();
 	cout << "-----------------------------\n";
