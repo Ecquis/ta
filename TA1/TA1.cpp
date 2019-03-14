@@ -20,7 +20,7 @@ void ReadFromFile(Enrolle enr[]) {
 }
 
 void CalculateRating(Enrolle enr[]) {
-	
+	cout << "Lexa";
 }
 
 void SortEnrolles(Enrolle enr[]) {
