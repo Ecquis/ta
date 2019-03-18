@@ -1,0 +1,9 @@
+(1)	write("reading")
+(c)	ReadFromFile()
+(1)	write("reading completed")
+(1)	write("---")
+(n)	for i to n:
+    (13)	rating = ex1*c1 + ex2*c2 + ex3*c3 + (cm*8.33333 + 100)*(1 - (c1+c2+c3)
+(1)	write("calculating completed")
+
+O(n) = 1+c+1+1+n*13+1 = (c + 4) + n*13 = n

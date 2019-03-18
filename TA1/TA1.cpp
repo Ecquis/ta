@@ -47,7 +47,7 @@ void CalculateRating() {
 	float start_time = clock();
 	for (int i = 0; i < n; i ++) {
 		enr[i].ratMark = enr[i].ex1*coef1 + enr[i].ex2*coef2 + enr[i].ex3*coef3 + 
-						 (enr[i].certMark / 12 * 100 + 100)*(1 - (coef1 + coef2 + coef3));
+						 (enr[i].certMark *8.33333f + 100)*(1 - (coef1 + coef2 + coef3));
 	}
 	float finish_time = clock();
 	cout << "Rating calculation time: " << finish_time - start_time << " ms\n";
