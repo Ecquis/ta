@@ -1,7 +1,6 @@
-﻿  pch.cpp
-  Enrolle.cpp
-  TA1.cpp
-d:\study\theory of algorhytms\ta\ta1\ta1.cpp(47): warning C4244: инициализация: преобразование "clock_t" в "float", возможна потеря данных
-d:\study\theory of algorhytms\ta\ta1\ta1.cpp(52): warning C4244: инициализация: преобразование "clock_t" в "float", возможна потеря данных
-  Создание кода...
-  TA1.vcxproj -> D:\Study\Theory of Algorhytms\ta\TA1\x64\Debug\TA1.exe
+﻿  TA1.cpp
+d:\omax1\coding\games\ta\ta1\ta1.cpp(71): warning C4244: инициализация: преобразование "clock_t" в "float", возможна потеря данных
+d:\omax1\coding\games\ta\ta1\ta1.cpp(76): warning C4244: инициализация: преобразование "clock_t" в "float", возможна потеря данных
+d:\omax1\coding\games\ta\ta1\ta1.cpp(127): warning C4244: инициализация: преобразование "clock_t" в "float", возможна потеря данных
+d:\omax1\coding\games\ta\ta1\ta1.cpp(129): warning C4244: инициализация: преобразование "clock_t" в "float", возможна потеря данных
+  TA1.vcxproj -> D:\omax1\Coding\Games\ta\TA1\x64\Debug\TA1.exe

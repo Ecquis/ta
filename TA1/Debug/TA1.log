@@ -1,6 +1,6 @@
 ﻿  TA1.cpp
-d:\study\theory of algorhytms\ta\ta1\ta1.cpp(47): warning C4244: инициализация: преобразование "clock_t" в "float", возможна потеря данных
-d:\study\theory of algorhytms\ta\ta1\ta1.cpp(52): warning C4244: инициализация: преобразование "clock_t" в "float", возможна потеря данных
-d:\study\theory of algorhytms\ta\ta1\ta1.cpp(60): warning C4244: инициализация: преобразование "clock_t" в "float", возможна потеря данных
-d:\study\theory of algorhytms\ta\ta1\ta1.cpp(70): warning C4244: инициализация: преобразование "clock_t" в "float", возможна потеря данных
-  TA1.vcxproj -> D:\Study\Theory of Algorhytms\ta\TA1\Debug\TA1.exe
+d:\omax1\coding\games\ta\ta1\ta1.cpp(70): warning C4244: инициализация: преобразование "clock_t" в "float", возможна потеря данных
+d:\omax1\coding\games\ta\ta1\ta1.cpp(75): warning C4244: инициализация: преобразование "clock_t" в "float", возможна потеря данных
+d:\omax1\coding\games\ta\ta1\ta1.cpp(125): warning C4244: инициализация: преобразование "clock_t" в "float", возможна потеря данных
+d:\omax1\coding\games\ta\ta1\ta1.cpp(127): warning C4244: инициализация: преобразование "clock_t" в "float", возможна потеря данных
+  TA1.vcxproj -> D:\omax1\Coding\Games\ta\TA1\Debug\TA1.exe
