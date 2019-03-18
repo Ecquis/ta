@@ -1,4 +1,4 @@
-﻿// TA1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+// TA1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
 #include "pch.h"
@@ -60,14 +60,27 @@ float check() {
 
 
 void CalculateRating() {
+//<<<<<<< HEAD
 //<<<<<<< Updated upstream
+//=======
+//<<<<<<< Updated upstream
+	float start_time = clock();
+	for (int i = 0; i < n; i ++) {
+		enr[i].ratMark = enr[i].ex1*coef1 + enr[i].ex2*coef2 + enr[i].ex3*coef3 + 
+						 (enr[i].certMark *8.33333f + 100)*(1 - (coef1 + coef2 + coef3));
+//=======
+//>>>>>>> master
 	cout << "Enter coef for the first exam\n";
 	coef1 = check();
 	cout << "Enter coef for the second exam\n";
 	coef2 = check();
 	cout << "Enter coef for the third exam\n";
 	coef3 = check();
+//<<<<<<< HEAD
 	if (coef1 + coef2 + coef3 <= 0.95f) {
+//=======
+	if (coef1 + coef2 + coef3 < 0.95f) {
+//>>>>>>> master
 		float start_time = clock();
 		for (int i = 0; i < n; i++) {
 			enr[i].ratMark = enr[i].ex1*coef1 + enr[i].ex2*coef2 + enr[i].ex3*coef3 +
@@ -75,7 +88,11 @@ void CalculateRating() {
 		}
 		float finish_time = clock();
 		cout << "Rating calculation time: " << finish_time - start_time << " ms\n";
+//<<<<<<< HEAD
 //>>>>>>> Stashed changes
+//=======
+//>>>>>>> Stashed changes
+//>>>>>>> master
 	}
 	else
 	{
