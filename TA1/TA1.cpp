@@ -43,15 +43,53 @@ void ReadFromFile(string path) {
 	}
 }
 
+float check() {
+	float a;
+	for (;;) {
+		try
+		{
+			cin >> a;
+			return a;
+		}
+		catch (const std::exception&)
+		{
+			cout << "Please enter float";
+		}
+	}
+}
+
+
 void CalculateRating() {
+<<<<<<< Updated upstream
 	float start_time = clock();
 	for (int i = 0; i < n; i ++) {
 		enr[i].ratMark = enr[i].ex1*coef1 + enr[i].ex2*coef2 + enr[i].ex3*coef3 + 
 						 (enr[i].certMark *8.33333f + 100)*(1 - (coef1 + coef2 + coef3));
+=======
+	cout << "Enter coef for the first exam\n";
+	coef1 = check();
+	cout << "Enter coef for the second exam\n";
+	coef2 = check();
+	cout << "Enter coef for the third exam\n";
+	coef3 = check();
+	if (coef1 + coef2 + coef3 < 0.95f) {
+		float start_time = clock();
+		for (int i = 0; i < n; i++) {
+			enr[i].ratMark = enr[i].ex1*coef1 + enr[i].ex2*coef2 + enr[i].ex3*coef3 +
+				(enr[i].certMark / 12 * 100 + 100)*(1 - (coef1 + coef2 + coef3));
+		}
+		float finish_time = clock();
+		cout << "Rating calculation time: " << finish_time - start_time << " ms\n";
+>>>>>>> Stashed changes
 	}
-	float finish_time = clock();
-	cout << "Rating calculation time: " << finish_time - start_time << " ms\n";
+	else
+	{
+		cout << "coef1 + coef2 + coef3 must be less than 0.95\n";
+		CalculateRating();
+	}
+	
 }
+
 
 // insertion sort
 /*
@@ -90,10 +128,12 @@ void PrintFiveFirstAndLast() {
 
 int main()
 {
-	coef1 = coef2 = coef3 = 0.3f;
 	cout << "reading from file...\n";
+	float start_time = clock();
 	ReadFromFile("base.csv");
+	float end_time = clock();
 	cout << "reading from file completed.\n";
+	cout << "Time reading " << end_time - start_time << "ms\n";
 	cout << "-----------------------------\n";
 	CalculateRating();
 	cout << "-----------------------------\n";
